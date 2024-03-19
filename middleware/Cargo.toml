@@ -1,0 +1,18 @@
+[package]
+name = "middleware"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+flate2 = "1.0.24"
+bitflags = "2.4.2"
+wit-bindgen-rt = "0.22.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[package.metadata.component]
+target = { path = "../service.wit", world = "middleware" }
+
+[workspace]
